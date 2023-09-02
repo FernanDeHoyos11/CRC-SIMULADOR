@@ -1,9 +1,13 @@
+import { convertFromSuperscript } from "../hooks/Conversion";
+
 
 
 export const CovertToBinary = ({polynomial}) => {
   
+  const format = convertFromSuperscript(polynomial);
   
-  const terms = polynomial.split('+').map(term => term.trim());
+  
+  const terms = format.split('+').map(term => term.trim());
 
   // Realiza la conversión del polinomio a representación binaria
   const maxDegree = Math.max(...terms.map(term => {
@@ -25,6 +29,8 @@ export const CovertToBinary = ({polynomial}) => {
       binaryRepresentation += '0';
     }
   }
+
+  
 
   return (
     <div>
