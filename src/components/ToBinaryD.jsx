@@ -1,5 +1,5 @@
-import { expresionABinario } from "../helpers/newConver";
-import { polinomio, polinomioABinario } from "../helpers/polinomio";
+
+import {polinomioABinario } from "../helpers/polinomio";
 
 
 
