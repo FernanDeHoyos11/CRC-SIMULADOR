@@ -6,6 +6,7 @@ export class Ciclica {
       this.cadena = datos + crc;
       this.resulParcial = "";
       this.cociente = "";
+      this.residuo = "";
       this.staticCrc = "";
       this.tabulador = "";
       this.tabulador2 = " ";
@@ -30,6 +31,10 @@ export class Ciclica {
       return this.cadena;
   }
 
+  getResiduo() {
+    return this.residuo;
+}
+
 // Modifica el método 'recorrer' para que devuelva una cadena
 recorrer(li, ls) {
   this.tabulador += " ";
@@ -39,7 +44,9 @@ recorrer(li, ls) {
   if (ls == this.cadena.length + 1) {
     resultadoRecorrer += "cociente total " + this.cociente + "\n";
     this.staticCrc = this.resulParcial;
+    this.residuo = this.resulParcial;
     resultadoRecorrer += "Residuo  " + this.staticCrc + "\n";
+
     return resultadoRecorrer;
   }
 
